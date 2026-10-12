@@ -1,0 +1,285 @@
+{
+  "titulo": "Mi hermana Ji, por Papelucho",
+  "autor": "Marcela Paz",
+  "curso": "5° básico",
+  "modo": "guia",
+  "preguntas": [
+    {
+      "titulo": "La casa",
+      "icono": "🔑",
+      "pregunta": "¿Por qué razón Papelucho y su familia quedan encerrados con llave en la casa?",
+      "respuesta": "Los papás pusieron llave a la puerta para que la Ji no se escapara. Pero la Ji se llevó la llave. Todos quedaron encerrados adentro.",
+      "correcta": "La Ji se llevó la llave de la puerta y todos quedaron encerrados.",
+      "incorrectas": [
+        "Un temblor trabó la puerta de la casa.",
+        "La Domi perdió la llave en el mercado."
+      ],
+      "seguro": true
+    },
+    {
+      "titulo": "El baño",
+      "icono": "🛁",
+      "pregunta": "¿Por qué razón Papelucho debe dormir en el baño?",
+      "respuesta": "La Ji encerró a Papelucho en el baño con llave. Después tiró la llave por el desagüe. El cerrajero no llegó esa noche, así que Papelucho durmió en la tina.",
+      "correcta": "La Ji lo encerró con llave y el cerrajero no llegó esa noche.",
+      "incorrectas": [
+        "Lo castigaron por sus malas notas.",
+        "Su pieza estaba llena de sapos."
+      ],
+      "seguro": true
+    },
+    {
+      "titulo": "La cocina",
+      "icono": "💧",
+      "pregunta": "¿Por qué razón Ji inunda la cocina?",
+      "respuesta": "Papelucho y la Ji lavaron los platos con la manguera. Papelucho se fue a escribir. La Ji siguió sola y lavó toda la cocina con la manguera. Por eso se inundó.",
+      "correcta": "Quiso lavar toda la cocina con la manguera del jardín.",
+      "incorrectas": [
+        "Dejó la tina abierta para bañar a unos sapos.",
+        "Se rompió una cañería del lavaplatos."
+      ],
+      "seguro": true
+    },
+    {
+      "titulo": "El zapatero",
+      "icono": "👞",
+      "pregunta": "¿Por qué Papelucho le hace preguntas al zapatero?",
+      "respuesta": "Se murieron unos gatitos. La Domi dijo que los animales no tienen alma. Papelucho no le creyó. Por eso fue a preguntarle al zapatero, porque pensaba que él sabía todo.",
+      "correcta": "Quería saber qué pasa con los gatitos que se murieron.",
+      "incorrectas": [
+        "Necesitaba arreglar sus zapatos rotos.",
+        "Quería comprarle una herramienta para abrir puertas."
+      ],
+      "seguro": true
+    },
+    {
+      "titulo": "El techo",
+      "icono": "🐱",
+      "pregunta": "¿Por qué razón Papelucho no se había dado cuenta de que Ji estaba en el techo y el gato estaba con él?",
+      "respuesta": "La Ji le puso su pulsera de cascabeles al gato. Papelucho escuchaba los cascabeles a su lado. Creía que era la Ji, pero era el gato.",
+      "correcta": "El gato tenía los cascabeles de la Ji, y Papelucho creía que era ella.",
+      "incorrectas": [
+        "Papelucho estaba durmiendo la siesta.",
+        "Papelucho estaba en la casa del Jolly."
+      ],
+      "seguro": true
+    },
+    {
+      "titulo": "Personajes",
+      "icono": "👨‍👩‍👧",
+      "pregunta": "Menciona al menos 4 personajes que aparezcan en la historia.",
+      "respuesta": "Papelucho, la Ji, la mamá, el papá, la Domi y el Jolly.",
+      "correcta": "Papelucho, la Ji, la Domi y el Jolly.",
+      "incorrectas": [
+        "Papelucho, Pinocho, Gepeto y el Grillo.",
+        "La Ji, Caperucita, el Lobo y la Abuelita."
+      ],
+      "seguro": true
+    }
+  ],
+  "verdaderoFalso": [
+    {
+      "frase": "La Ji se llevó la llave de la casa.",
+      "esVerdadera": true,
+      "explicacion": "La Ji se llevó la llave y todos quedaron encerrados.",
+      "pregunta": 1,
+      "seguro": true
+    },
+    {
+      "frase": "Un ladrón se robó la llave de la casa.",
+      "esVerdadera": false,
+      "explicacion": "No fue un ladrón. Fue la Ji.",
+      "pregunta": 1,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho durmió en la tina del baño.",
+      "esVerdadera": true,
+      "explicacion": "El cerrajero no llegó, y Papelucho durmió en la tina.",
+      "pregunta": 2,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho se encerró solo en el baño porque estaba castigado.",
+      "esVerdadera": false,
+      "explicacion": "No estaba castigado. La Ji lo encerró con llave.",
+      "pregunta": 2,
+      "seguro": true
+    },
+    {
+      "frase": "La Ji inundó la cocina con la manguera del jardín.",
+      "esVerdadera": true,
+      "explicacion": "La Ji quiso lavar toda la cocina con la manguera.",
+      "pregunta": 3,
+      "seguro": true
+    },
+    {
+      "frase": "La Domi fue la que inundó la cocina.",
+      "esVerdadera": false,
+      "explicacion": "No fue la Domi. Fue la Ji.",
+      "pregunta": 3,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho le preguntó al zapatero por los gatitos que se murieron.",
+      "esVerdadera": true,
+      "explicacion": "Quería saber si los gatitos tenían alma.",
+      "pregunta": 4,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho fue donde el zapatero a arreglar sus zapatos.",
+      "esVerdadera": false,
+      "explicacion": "No fue por los zapatos. Fue a preguntarle por los gatitos.",
+      "pregunta": 4,
+      "seguro": true
+    },
+    {
+      "frase": "La Ji le puso sus cascabeles al gato.",
+      "esVerdadera": true,
+      "explicacion": "Por eso Papelucho oía el tilín y creía que era la Ji.",
+      "pregunta": 5,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho no vio a la Ji porque estaba durmiendo.",
+      "esVerdadera": false,
+      "explicacion": "No estaba durmiendo. Oía los cascabeles y creía que era la Ji.",
+      "pregunta": 5,
+      "seguro": true
+    },
+    {
+      "frase": "El Jolly es amigo de Papelucho.",
+      "esVerdadera": true,
+      "explicacion": "El Jolly es su amigo americano.",
+      "pregunta": 6,
+      "seguro": true
+    },
+    {
+      "frase": "La Domi es la abuela de Papelucho.",
+      "esVerdadera": false,
+      "explicacion": "La Domi no es la abuela. Es la nana de la casa.",
+      "pregunta": 6,
+      "seguro": true
+    }
+  ],
+  "completar": [
+    {
+      "frase": "Los papás cerraron la puerta con ___ para que la Ji no se ___.",
+      "respuestas": [
+        "llave",
+        "escapara"
+      ],
+      "distractores": [
+        "cadena",
+        "durmiera"
+      ],
+      "pregunta": 1,
+      "seguro": true
+    },
+    {
+      "frase": "La ___ se llevó la llave y todos quedaron ___ en la casa.",
+      "respuestas": [
+        "Ji",
+        "encerrados"
+      ],
+      "distractores": [
+        "Domi",
+        "perdidos"
+      ],
+      "pregunta": 1,
+      "seguro": true
+    },
+    {
+      "frase": "La Ji encerró a Papelucho en el ___ y tiró la llave por el ___.",
+      "respuestas": [
+        "baño",
+        "desagüe"
+      ],
+      "distractores": [
+        "techo",
+        "jardín"
+      ],
+      "pregunta": 2,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho durmió en la ___ porque el ___ no llegó.",
+      "respuestas": [
+        "tina",
+        "cerrajero"
+      ],
+      "distractores": [
+        "cama",
+        "zapatero"
+      ],
+      "pregunta": 2,
+      "seguro": true
+    },
+    {
+      "frase": "La Ji lavó toda la ___ con la ___ del jardín.",
+      "respuestas": [
+        "cocina",
+        "manguera"
+      ],
+      "distractores": [
+        "pieza",
+        "escoba"
+      ],
+      "pregunta": 3,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho le preguntó al ___ por los ___ que se murieron.",
+      "respuestas": [
+        "zapatero",
+        "gatitos"
+      ],
+      "distractores": [
+        "cerrajero",
+        "sapos"
+      ],
+      "pregunta": 4,
+      "seguro": true
+    },
+    {
+      "frase": "La Ji le puso sus ___ al ___.",
+      "respuestas": [
+        "cascabeles",
+        "gato"
+      ],
+      "distractores": [
+        "zapatos",
+        "perro"
+      ],
+      "pregunta": 5,
+      "seguro": true
+    },
+    {
+      "frase": "Papelucho oía el tilín y creía que era la ___, pero era el ___.",
+      "respuestas": [
+        "Ji",
+        "gato"
+      ],
+      "distractores": [
+        "Domi",
+        "Jolly"
+      ],
+      "pregunta": 5,
+      "seguro": true
+    },
+    {
+      "frase": "Su hermana es la ___, la nana es la ___ y su amigo es el ___.",
+      "respuestas": [
+        "Ji",
+        "Domi",
+        "Jolly"
+      ],
+      "distractores": [
+        "Pedro"
+      ],
+      "pregunta": 6,
+      "seguro": true
+    }
+  ]
+}
