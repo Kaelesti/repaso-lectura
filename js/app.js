@@ -124,7 +124,7 @@
       h += '<p class="nota"><a href="#" id="a-ejemplo">Ver el ejemplo de Papelucho</a></p>';
     }
     pantalla("Soy apoderado", inicio, h);
-    $("a-nuevo").onclick = function () { F = { titulo: "", autor: "", curso: "5° básico", capitulos: "", tengoLibro: true, tengoGuia: false }; paso1(); };
+    $("a-nuevo").onclick = function () { F = { titulo: "", autor: "", curso: "5° básico", capitulos: "", tengoLibro: true, tengoGuia: false, cantidad: 10 }; paso1(); };
     $("a-importar").onclick = importar;
     var ej = $("a-ejemplo");
     if (ej) ej.onclick = function (e) { e.preventDefault(); cargarEjemplo(); };
@@ -149,6 +149,7 @@
   }
 
   /* ===== Paso 1: datos del libro ===== */
+  var CANTIDADES = [{ n: 6, t: "Pocos" }, { n: 10, t: "Normal" }, { n: 20, t: "Muchos" }];
   function paso1() {
     var cursos = ["1° básico", "2° básico", "3° básico", "4° básico", "5° básico", "6° básico", "7° básico", "8° básico", "I medio", "II medio", "III medio", "IV medio"];
     pantalla("Preparar un libro", apoderado, pasos(1) +
@@ -162,7 +163,28 @@
       '<label class="check"><input type="checkbox" id="f-lib"' + (F.tengoLibro ? " checked" : "") + '> 📖 El libro (PDF o fotos de las páginas)</label>' +
       '<label class="check"><input type="checkbox" id="f-gui"' + (F.tengoGuia ? " checked" : "") + '> 📝 La guía del profesor con las preguntas</label>' +
       '<div id="f-fuentes"></div>' +
+      '<label class="campo">¿Cuántos ejercicios por sección?</label>' +
+      '<div class="cantidades">' + CANTIDADES.map(function (c) {
+        return '<button type="button" class="cant' + (c.n === F.cantidad ? " activa" : "") + '" data-cant="' + c.n + '"><b>' + c.t + '</b><small>' + c.n + '</small></button>';
+      }).join("") + '</div><p class="pista" id="f-cant-nota" style="margin-top:6px"></p>' +
       '<button class="btn" id="f-sig">Siguiente ➡️</button></div>');
+    function notaCantidad() {
+      var n = F.cantidad;
+      var t = $("f-gui").checked
+        ? "Las preguntas serán las de la guía. Verdadero o falso y completar tendrán " + n + " cada una."
+        : "Se crearán " + n + " preguntas, " + n + " de verdadero o falso y " + n + " para completar.";
+      if (n >= 20) t += " Si tu IA corta la respuesta, pídele \"continúa\" o elige Normal.";
+      $("f-cant-nota").textContent = t;
+    }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-cant]"), function (b) {
+      b.onclick = function () {
+        F.cantidad = +b.getAttribute("data-cant");
+        Array.prototype.forEach.call(document.querySelectorAll("[data-cant]"), function (x) { x.classList.toggle("activa", x === b); });
+        notaCantidad();
+      };
+    });
+    $("f-gui").onchange = notaCantidad;
+    notaCantidad();
     function fuentes() {
       var sinLibro = !$("f-lib").checked;
       $("f-fuentes").innerHTML = sinLibro
@@ -194,16 +216,18 @@
     l.push('- Si no puedes leer algún archivo adjunto, dímelo en vez de inventar.');
     l.push('');
     l.push('TAREA');
+    var n = F.cantidad || 10;
     if (F.tengoGuia) l.push('1. "preguntas": usa exactamente las preguntas de la guía, en el mismo orden, sin agregar otras.');
-    else l.push('1. "preguntas": crea 6 preguntas importantes sobre la historia (personajes, hechos principales, causas y consecuencias).');
+    else l.push('1. "preguntas": crea ' + n + ' preguntas importantes sobre la historia (personajes, hechos principales, causas y consecuencias), sin repetir ideas.');
     l.push('   Para cada pregunta escribe:');
     l.push('   - "titulo": de 1 a 3 palabras (ej: "La cocina").');
     l.push('   - "icono": un solo emoji que la represente.');
     l.push('   - "respuesta": de 2 a 4 frases cortas y simples, que un niño de ' + F.curso + ' pueda decir con sus palabras.');
     l.push('   - "correcta": la respuesta correcta en una frase breve.');
     l.push('   - "incorrectas": 2 respuestas falsas pero creíbles, de largo parecido a la correcta.');
-    l.push('2. "verdaderoFalso": 2 frases por cada pregunta (una verdadera y una falsa), cada una con una "explicacion" de una frase. En "pregunta" pon el número de la pregunta relacionada.');
-    l.push('3. "completar": 1 o 2 oraciones por cada pregunta. Marca cada palabra que falta con ___ (tres guiones bajos). En "respuestas" pon las palabras que faltan, en orden, una palabra por espacio. En "distractores" pon 2 palabras parecidas que NO correspondan.');
+    l.push('2. "verdaderoFalso": exactamente ' + n + ' frases en total, repartidas entre las preguntas, mitad verdaderas y mitad falsas. Cada una con una "explicacion" de una frase. En "pregunta" pon el número de la pregunta relacionada.');
+    l.push('3. "completar": exactamente ' + n + ' oraciones en total, repartidas entre las preguntas. Marca cada palabra que falta con ___ (tres guiones bajos), con 1 a 3 espacios por oración. En "respuestas" pon las palabras que faltan, en orden, una palabra por espacio. En "distractores" pon 2 palabras parecidas que NO correspondan.');
+    if (n >= 20) l.push('Si la respuesta no te cabe completa, termina el bloque JSON correctamente y avísame para pedirte el resto.');
     l.push('');
     l.push('REGLAS');
     l.push('- Lenguaje simple y frases cortas, adecuadas para ' + F.curso + '.');
