@@ -116,7 +116,8 @@
     } else {
       ls.forEach(function (x) {
         h += '<div class="card" style="--c:var(--accent)"><div class="lista-libro"><span class="ic">📘</span><div class="txt"><b>' + esc(x.libro.titulo) +
-          '</b><small>' + esc(resumen(x.libro)) + '</small></div></div><div class="fila" style="margin-top:10px">' +
+          '</b><small>' + esc(resumen(x.libro)) + '</small></div>' +
+          '<button class="mini borrar" data-borrar="' + esc(x.id) + '" aria-label="Borrar">🗑️</button></div><div class="fila" style="margin-top:10px">' +
           '<button class="mini" data-ver="' + esc(x.id) + '">✏️ Revisar</button>' +
           '<button class="mini" data-jugar="' + esc(x.id) + '">▶️ Probar</button>' +
           '<button class="mini" data-compartir="' + esc(x.id) + '">📤 Compartir</button></div></div>';
@@ -139,6 +140,9 @@
     cada("data-ver", function (id, l) { var v = C.validar(l); F = { id: id, libro: v.libro, avisos: [] }; paso4(); });
     cada("data-jugar", function (id, l) { jugar(l, apoderado); });
     cada("data-compartir", function (id, l) { compartir(l, apoderado); });
+    cada("data-borrar", function (id, l) {
+      if (confirm("¿Borrar \"" + l.titulo + "\" de este celular?")) { borrarLibro(id); apoderado(); }
+    });
   }
   function cargarEjemplo() {
     fetch("libros/papelucho-ji.json").then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
