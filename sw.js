@@ -1,9 +1,10 @@
 /* Guarda la app en el celular para que funcione sin internet.
    Al cambiar archivos de la app, sube el número de VERSION. */
-var VERSION = "repaso-v3";
+var VERSION = "repaso-v4";
 var ARCHIVOS = [
   "./", "index.html", "manifest.json",
   "css/estilos.css", "js/comun.js", "js/juego.js", "js/app.js",
+  "geometria/", "geometria/index.html", "geometria/geo.css", "geometria/geo.js",
   "libros/papelucho-ji.json", "icons/icon-192.png", "icons/icon-512.png"
 ];
 

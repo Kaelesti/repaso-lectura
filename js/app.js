@@ -82,6 +82,7 @@
       '<div class="menu">' +
       '<button class="mbtn" style="background:#ffe1ec" id="a-apo"><span class="ic">🧑‍🏫</span><span>Soy apoderado<small>Preparo el material de un libro</small></span></button>' +
       '<button class="mbtn" style="background:#dff5e7" id="a-alu"><span class="ic">🧒</span><span>Soy alumno<small>Quiero repasar y jugar</small></span></button>' +
+      '<a class="mbtn" style="background:#e6e8ff;text-decoration:none" href="geometria/"><span class="ic">📐</span><span>Taller de geometría<small>Construye figuras y cuerpos geométricos</small></span></a>' +
       '</div><p class="nota">Funciona sin internet una vez abierta.</p>');
     $("a-apo").onclick = apoderado;
     $("a-alu").onclick = alumno;

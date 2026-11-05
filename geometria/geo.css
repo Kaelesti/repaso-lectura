@@ -1,0 +1,22 @@
+/* Estilos propios del Taller de geometría (se suman a ../css/estilos.css) */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:17px;font-weight:700;cursor:pointer;color:var(--ink)}
+.chip.activa{background:var(--accent);border-color:var(--accent);color:#fff}
+.chips.peq .chip{font-size:15px;padding:6px 12px}
+.lienzo{background:#fff;border-radius:18px;box-shadow:var(--shadow);padding:6px;margin-top:12px}
+.lienzo svg{display:block;width:100%;height:auto;user-select:none;-webkit-user-select:none}
+.lienzo.girar svg{touch-action:none;cursor:grab}
+.herr{display:flex;gap:8px}
+.herr .btn{font-size:16px;padding:12px 6px}
+.bandeja{display:flex;align-items:center;gap:14px;margin-top:12px;background:#fff;border-radius:16px;padding:12px;box-shadow:var(--shadow);font-size:17px}
+.bandeja small{color:var(--muted);font-size:15px}
+.pieza{width:56px;height:56px;flex:none;background:#8ecae6;border:3px solid #2b2b3a;border-radius:6px;touch-action:none;cursor:grab}
+.fantasma{position:fixed;z-index:50;pointer-events:none;opacity:.85}
+.cuenta{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.cuenta span{background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:16px;box-shadow:0 2px 0 rgba(0,0,0,.06)}
+.cuenta span.listo{background:var(--okbg);color:var(--ok)}
+.fb .cuenta span{box-shadow:none}
+.mbtn .listo{margin-left:auto;font-size:26px}
+@keyframes latido{50%{stroke-opacity:.15}}
+.pulso{animation:latido 1s infinite}
+.toca{cursor:pointer}

@@ -15,6 +15,15 @@ Funciona en el celular, se puede instalar y sirve sin internet.
 **Alumno**
 Abre el archivo o el enlace y juega en cuatro secciones: alternativas, verdadero o falso, completar la oración y tirar el dado. Todo con voz.
 
+## Taller de geometría
+
+En la carpeta `geometria/` (enlazado desde el inicio). No usa IA: todo se calcula dentro de la app.
+
+1. **Trazar figuras:** el alumno toca puntos de la cuadrícula para formar figuras 2D y la app las reconoce (triángulo, cuadrado, rectángulo, rombo, etc.).
+2. **Construir el cubo:** a partir de su cuadrado, elige entre **armarlo con caras** (arma el desarrollo y la app lo dobla en 3D; reconoce las 11 formas válidas) o **dibujarlo en perspectiva** (la app reconoce el cubo y muestra las aristas ocultas).
+3. **Partes del cubo:** gira el cubo con el dedo y marca sus 6 caras, 12 aristas y 8 vértices.
+4. **Movimientos:** dibuja la reflexión de una figura respecto de un eje o su traslación según una indicación; la app revisa y muestra la animación del movimiento.
+
 ## Publicar en GitHub Pages
 
 1. Crea un repositorio nuevo en GitHub, por ejemplo `repaso-lectura`.
@@ -40,6 +49,7 @@ js/comun.js         Voz, lectura y validación del contenido
 js/juego.js         Motor de las 4 secciones (también va dentro del HTML del alumno)
 js/app.js           Inicio, sección apoderado y sección alumno
 libros/             Libros de ejemplo en formato JSON
+geometria/          Taller de geometría (index.html, geo.js, geo.css)
 icons/              Íconos de la app
 manifest.json       Datos para instalarla en el celular
 sw.js               Permite usarla sin internet
